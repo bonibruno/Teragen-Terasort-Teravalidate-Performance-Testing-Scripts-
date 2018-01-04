@@ -9,4 +9,4 @@ A log directory is created based on where you run the script. Run output and sta
 
 Run the jobs in the following order: teragen, terasort, teravalidate.
 
-Note:  The tuning parameters specified in the script should be changed to accomodate your particular Hadoop cluster.  
+Note:  The tuning parameters specified in the scripts should be changed to accomodate your particular Hadoop cluster.  
