@@ -12,4 +12,4 @@ Run the jobs in the following order: teragen, terasort, teravalidate.
 Note:  The tuning parameters specified in the scripts should be changed to accomodate your particular Hadoop cluster.  
        For normal clusters just use teragen.sh, terasort.sh, and teravalidate.sh.  
        The other scripts with numbers, e.g. teragen-h600.sh, make reference to a remote HDFS filesystem for HDFS Tiering testing.
-       If your testing remote HDFS file systems, just specify the remote hdfs path accordingly.  
+       If your testing remote HDFS file systems, just specify the remote hdfs path for the input/output variables accordingly.  
