@@ -32,11 +32,13 @@ Usage: ./teratests.sh -p <teragen|terasort|teravalidate|all> -x <replication_lev
 
                 -h - print this message
 
-eg: ./teratests.sh -p terasort -x 2 -m 200 -r 300 -d 100000000 -s regular -i ts_in -o ts_out -D CDP
+Below are some examples on executing teragen, terasort, and teravalidate with teratests.sh.  Note that the Hadoop distribution will be the same for all three tests when running on a cluster, I'm just showing here that the three distributions are supported, i.e. -D HDP, -D CDH, and -D CDP.
 
-eg: ./teratests.sh -p teragen -x 3 -m 200 -r 300 -d 100000000 -s regular -i ts_in -B 512 -o ts_out -D HDP
+eg: ./teratests.sh -p teragen -x 1 -m 200 -M 4096 -d 100000000 -s regular -B 256 -i ts_in -o ts_out -D HDP
 
-eg: ./teratests.sh -p teravalidate -m 161 -M 2048 -r 81 -R 4096 -d 10000000000 -B 256 -i ts_in -o ts_out -O ts_rep -D CDH
+eg: ./teratests.sh -p terasort -x 1 -m 200 -M 4096 -r 100 -R 4096 -B 256 -i ts_in -o ts_out -D CDP
+
+eg: ./teratests.sh -p teravalidate -M 4096 -B 256 -i ts_in -o ts_out -O ts_rep -D CDH
 
 
 Note:  When setting memory options with the -M or -R flags, make sure you choose values that are greater than the defined mapreduce.map.java.opts and mapreduce.reduce.java.opts on your Hadoop cluster or else you will get memory exceeded errors!!!
